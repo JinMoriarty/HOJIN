@@ -1,0 +1,10 @@
+diff a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml	(rejected hunks)
+@@ -28,7 +28,7 @@
+ 	<interceptors>
+ 		<interceptor>
+   			<mapping path="/admin/**" />
+-		  	<beans:ref bean="AdminInterceptor" />
++		  	<beans:ref bean="AdminInterceptor"/>
+  		</interceptor>
+ 	</interceptors>
+ 	

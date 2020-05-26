@@ -1,0 +1,789 @@
+From 950f5ea7754ab45f929485d5974eac23014ccb76 Mon Sep 17 00:00:00 2001
+From: Morrian <wls2642@gmail.com>
+Date: Tue, 26 May 2020 10:33:22 +0900
+Subject: [PATCH] =?UTF-8?q?Revert=20"=EA=B4=80=EB=A6=AC=EC=9E=90=20?=
+ =?UTF-8?q?=ED=99=94=EB=A9=B4=20=EC=9D=B8=ED=84=B0=EC=85=89=ED=84=B0=20?=
+ =?UTF-8?q?=EC=B6=94=EA=B0=80"?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This reverts commit 4dfc04ba600474721acaefc1b239a0baf2850ccd.
+---
+ .../main/webapp/WEB-INF/spring/appServlet/servlet-context.xml   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+index 37d49ed..101d7b4 100644
+--- a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
++++ b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+@@ -28,7 +28,7 @@
+ 	<interceptors>
+ 		<interceptor>
+   			<mapping path="/admin/**" />
+-		  	<beans:ref bean="AdminInterceptor"/>
++		  	<beans:ref bean="AdminInterceptor" />
+  		</interceptor>
+ 	</interceptors>
+ 	
+-- 
+2.24.1.windows.2
+
+From 4dfc04ba600474721acaefc1b239a0baf2850ccd Mon Sep 17 00:00:00 2001
+From: Morrian <wls2642@gmail.com>
+Date: Tue, 26 May 2020 10:20:57 +0900
+Subject: [PATCH] =?UTF-8?q?=EA=B4=80=EB=A6=AC=EC=9E=90=20=ED=99=94?=
+ =?UTF-8?q?=EB=A9=B4=20=EC=9D=B8=ED=84=B0=EC=85=89=ED=84=B0=20=EC=B6=94?=
+ =?UTF-8?q?=EA=B0=80?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../main/webapp/WEB-INF/spring/appServlet/servlet-context.xml   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+index 101d7b4..37d49ed 100644
+--- a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
++++ b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+@@ -28,7 +28,7 @@
+ 	<interceptors>
+ 		<interceptor>
+   			<mapping path="/admin/**" />
+-		  	<beans:ref bean="AdminInterceptor" />
++		  	<beans:ref bean="AdminInterceptor"/>
+  		</interceptor>
+ 	</interceptors>
+ 	
+-- 
+2.24.1.windows.2
+
+From 4dfc04ba600474721acaefc1b239a0baf2850ccd Mon Sep 17 00:00:00 2001
+From: Morrian <wls2642@gmail.com>
+Date: Tue, 26 May 2020 10:20:57 +0900
+Subject: [PATCH] =?UTF-8?q?=EA=B4=80=EB=A6=AC=EC=9E=90=20=ED=99=94?=
+ =?UTF-8?q?=EB=A9=B4=20=EC=9D=B8=ED=84=B0=EC=85=89=ED=84=B0=20=EC=B6=94?=
+ =?UTF-8?q?=EA=B0=80?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../main/webapp/WEB-INF/spring/appServlet/servlet-context.xml   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+index 101d7b4..37d49ed 100644
+--- a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
++++ b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+@@ -28,7 +28,7 @@
+ 	<interceptors>
+ 		<interceptor>
+   			<mapping path="/admin/**" />
+-		  	<beans:ref bean="AdminInterceptor" />
++		  	<beans:ref bean="AdminInterceptor"/>
+  		</interceptor>
+ 	</interceptors>
+ 	
+-- 
+2.24.1.windows.2
+
+From 4ccee42a4e3732571fb54e4e36b066d6c01e03c4 Mon Sep 17 00:00:00 2001
+From: Morrian <wls2642@gmail.com>
+Date: Tue, 26 May 2020 10:19:25 +0900
+Subject: [PATCH] =?UTF-8?q?=EA=B4=80=EB=A6=AC=EC=9E=90=20=ED=99=94?=
+ =?UTF-8?q?=EB=A9=B4=20=EC=9D=B8=ED=84=B0=EC=85=89=ED=84=B0=20=EC=B6=94?=
+ =?UTF-8?q?=EA=B0=80?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../toon/interceptor/AdminInterceptor.java    |  33 ++++++++++++++++++
+ .../spring/appServlet/servlet-context.xml     |   9 +++++
+ .../toon/interceptor/AdminInterceptor.class   | Bin 0 -> 1351 bytes
+ 3 files changed, 42 insertions(+)
+ create mode 100644 HOJINTOON/src/main/java/com/toon/interceptor/AdminInterceptor.java
+ create mode 100644 HOJINTOON/target/classes/com/toon/interceptor/AdminInterceptor.class
+
+diff --git a/HOJINTOON/src/main/java/com/toon/interceptor/AdminInterceptor.java b/HOJINTOON/src/main/java/com/toon/interceptor/AdminInterceptor.java
+new file mode 100644
+index 0000000..d5f5140
+--- /dev/null
++++ b/HOJINTOON/src/main/java/com/toon/interceptor/AdminInterceptor.java
+@@ -0,0 +1,33 @@
++package com.toon.interceptor;
++
++import javax.servlet.http.HttpServletRequest;
++import javax.servlet.http.HttpServletResponse;
++import javax.servlet.http.HttpSession;
++
++import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
++
++import com.toon.domain.MemberVO;
++
++public class AdminInterceptor extends HandlerInterceptorAdapter {
++
++	@Override
++	public boolean preHandle(HttpServletRequest req,
++				HttpServletResponse res, Object obj) throws Exception {
++		
++		HttpSession session = req.getSession();
++		MemberVO member = (MemberVO)session.getAttribute("member");
++		
++		if(member == null) {
++			res.sendRedirect("/member/signin");
++			return false;
++		}
++		
++		
++		if(member.getVerify() != 9) {
++			res.sendRedirect("/");
++			return false;
++		}
++		
++		return true;
++	}
++}
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+index 54f00d9..101d7b4 100644
+--- a/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
++++ b/HOJINTOON/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+@@ -23,6 +23,15 @@
+ 	
+ 	<context:component-scan base-package="com.toon.controller" />
+ 	
++	<beans:bean id="AdminInterceptor" class="com.toon.interceptor.AdminInterceptor" />
++
++	<interceptors>
++		<interceptor>
++  			<mapping path="/admin/**" />
++		  	<beans:ref bean="AdminInterceptor" />
++ 		</interceptor>
++	</interceptors>
++	
+ 	
+ 	
+ </beans:beans>
+diff --git a/HOJINTOON/target/classes/com/toon/interceptor/AdminInterceptor.class b/HOJINTOON/target/classes/com/toon/interceptor/AdminInterceptor.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..a7d6ebfbef8e7fab6bbe075027add77195504d30
+GIT binary patch
+literal 1351
+zcma)6TTc@~6#k|cwwFbqSfqf;#X<|nct=<yAw~m9k%XE)__pm1WuV<HyIa6t;~(I~
+z7Y#lb-;Dkzjc0c%2(f`|GM6)F&iUp$-`StPzkCJo1TQp181glz$$iJMxwL)Z)<ny9
+zT)t*CrM+=(&=6x-bKE-jTCTL~JFeLjM~=JCk3^Mw!aZyVpYNKs)etUUSMxvj*DSL|
+z(HVMHq%HkbhG?N!VTiqSERjMKNgZ+YF!YtAE#9=7RpGuhs|~@BDLFN>Q88T^>^sJo
+zzbie4nbNh;8w|;oD-<jSt5DiA56$Cq+`ix9>ok<rL$<|1TX?>4rJL7sY)>dZ-Z1St
+z->UA3nr{@}F{EA{2W(1m(U4&n43a9Zvy(J#Vn{=l>ToScI&NW@Lf3^~7M@43872$G
+z?m$ByBY_d3z9|A)(-^}Y4YwKYbWIuF(s38#3_9gn^L<xV+dh?JT9K#TQ6{rpH&p%$
+z1ZbFK7(T0x<upxc^UV-JWh;Su3^%v}#64NJrJcq!3L0i8MOR#*%(jK1T}KhKgwGSU
+zwJj{^67dY#|KY2oFoAg;_pv}ypa)fiD|g<9D%?om0R!W-am7KPsjJc}afJS)!K=m8
+zQ3+jes(XQ;g9I1YV$i(5<s9#xUlo&K<XrZbh$W@>mVL9fziGBQt&%D`ZEEY+GH9mk
+z<;GqJun;)}j(!S2gjUpuG-|ZtG&7pxv!9Xp7#^o+432>`eSoeUXzryQRTX^{q@UI?
+z+6{zZevqYyEXLd^1{s!PxmYH5iqQzZVPZL+i+@M&d}itt`3RyXx%el{^(Q|BHr}zt
+zPUw0RLGo!NX&gWT84OYTj3SFETIDf9ct^2F`d%XG2H;jz+737ZfQNV#0yglNet{A4
+nG4K@6D0YG@i+E13RjeiAVVTZ#M1CQ!VNAosAl)^{7QxCN4>x2u
+
+literal 0
+HcmV?d00001
+
+-- 
+2.24.1.windows.2
+
+From 07e550530be037a2d1ecb3c64a0de1d762459be1 Mon Sep 17 00:00:00 2001
+From: Morrian <wls2642@gmail.com>
+Date: Tue, 26 May 2020 09:55:39 +0900
+Subject: [PATCH] =?UTF-8?q?=EA=B4=80=EB=A6=AC=EC=9E=90=20=ED=99=94?=
+ =?UTF-8?q?=EB=A9=B4=20=EC=B6=94=EA=B0=80?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../com/toon/controller/AdminController.java  | 330 ++++++++++++++++++
+ .../WEB-INF/views/admin/include/aside.jsp     |  13 +
+ .../WEB-INF/views/admin/include/footer.jsp    |   3 +
+ .../WEB-INF/views/admin/include/header.jsp    |   8 +
+ .../WEB-INF/views/admin/include/nav.jsp       |  13 +
+ .../main/webapp/WEB-INF/views/admin/index.jsp |  69 ++++
+ .../com/toon/controller/AdminController.class | Bin 0 -> 1039 bytes
+ .../maven/com.toon/hojin/pom.properties       |   2 +-
+ 8 files changed, 437 insertions(+), 1 deletion(-)
+ create mode 100644 HOJINTOON/src/main/java/com/toon/controller/AdminController.java
+ create mode 100644 HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/aside.jsp
+ create mode 100644 HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/footer.jsp
+ create mode 100644 HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/header.jsp
+ create mode 100644 HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/nav.jsp
+ create mode 100644 HOJINTOON/src/main/webapp/WEB-INF/views/admin/index.jsp
+ create mode 100644 HOJINTOON/target/classes/com/toon/controller/AdminController.class
+
+diff --git a/HOJINTOON/src/main/java/com/toon/controller/AdminController.java b/HOJINTOON/src/main/java/com/toon/controller/AdminController.java
+new file mode 100644
+index 0000000..94919e6
+--- /dev/null
++++ b/HOJINTOON/src/main/java/com/toon/controller/AdminController.java
+@@ -0,0 +1,330 @@
++package com.toon.controller;
++
++import java.io.File;
++import java.io.FileOutputStream;
++import java.io.IOException;
++import java.io.OutputStream;
++import java.io.PrintWriter;
++import java.util.HashMap;
++import java.util.List;
++import java.util.UUID;
++
++import javax.annotation.Resource;
++import javax.inject.Inject;
++import javax.servlet.http.HttpServletRequest;
++import javax.servlet.http.HttpServletResponse;
++import javax.servlet.http.HttpSession;
++
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++import org.springframework.stereotype.Controller;
++import org.springframework.ui.Model;
++import org.springframework.web.bind.annotation.ModelAttribute;
++import org.springframework.web.bind.annotation.RequestMapping;
++import org.springframework.web.bind.annotation.RequestMethod;
++import org.springframework.web.bind.annotation.RequestParam;
++import org.springframework.web.bind.annotation.ResponseBody;
++import org.springframework.web.multipart.MultipartFile;
++
++import com.toon.domain.IntoonVO;
++import com.toon.domain.MemberVO;
++import com.toon.domain.ToonVO;
++//import com.toon.domain.OrderListVO;
++//import com.toon.domain.OrderVO;
++//import com.toon.domain.ReplyListVO;
++//import com.toon.domain.ReplyVO;
++//import com.toon.service.AdminService;
++//import com.toon.utils.UploadFileUtils;
++
++//import net.sf.json.JSONArray;
++
++@Controller
++@RequestMapping("/admin/*")
++public class AdminController {
++
++	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
++	
++	@Inject
++	//AdminService adminService;
++		
++	/*@Resource(name="uploadPath")
++	private String uploadPath;*/
++	
++	// 관리자화면
++	@RequestMapping(value = "/index", method = RequestMethod.GET)
++	public void getIndex() throws Exception {
++		logger.info("get index"); 
++	}
++
++	/*// 상품 등록
++	@RequestMapping(value = "/goods/register", method = RequestMethod.GET)
++	public void getGoodsRegister(Model model) throws Exception {
++		logger.info("get goods register");
++		
++		List<CategoryVO> category = null;  // CatagoryVO 형태의 List형 변수 category 선언
++		category = adminService.category();  // DB에 저장된 카테고리를 가져와서 category에 저장
++		model.addAttribute("category", JSONArray.fromObject(category));  // 변수 category를 제이슨(json)타입으로 변환하여 category 세션에 부여
++	}
++
++	
++	
++	/*@RequestMapping(value = "/goods/register")
++	public String insertWarn(GoodsVO vo, HttpSession session,
++			@ModelAttribute("file") MultipartFile file) {
++		
++		try {
++			String imgUploadPath = uploadPath + File.separator + "imgUpload";
++			String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
++			String fileName = null;
++			if (file.getOriginalFilename() != null && file.getOriginalFilename() != "") {
++				fileName = UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(),
++						ymdPath);
++			} else {
++				fileName = uploadPath + File.separator + "images" + File.separator + "none.png";
++			}
++			vo.setGdsImg(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
++			vo.setGdsThumbImg(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
++			System.out.println("vo = " + vo.getGdsName());
++			System.out.println("vo = " + vo.getGdsImg());
++			
++			adminService.register(vo);
++			
++		} catch (Exception e) {
++		}
++		return "redirect:/admin/index";
++	}*/
++	/*
++	// 상품 등록
++	@RequestMapping(value = "/goods/register", method = RequestMethod.POST)
++	public String postGoodsRegister(GoodsVO vo, MultipartFile file) throws Exception {
++		
++		String imgUploadPath = uploadPath + File.separator + "imgUpload";  // 이미지를 업로드할 폴더를 설정 = /uploadPath/imgUpload 
++		String ymdPath = UploadFileUtils.calcPath(imgUploadPath);  // 위의 폴더를 기준으로 연월일 폴더를 생성
++		String fileName = null;  // 기본 경로와 별개로 작성되는 경로 + 파일이름
++				
++		if(file.getOriginalFilename() != null && file.getOriginalFilename() != "") {
++			// 파일 인풋박스에 첨부된 파일이 없다면(=첨부된 파일이 이름이 없다면)
++			
++			fileName =  UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(), ymdPath);
++	
++			// gdsImg에 원본 파일 경로 + 파일명 저장
++			vo.setGdsImg(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
++			// gdsThumbImg에 썸네일 파일 경로 + 썸네일 파일명 저장
++			vo.setGdsThumbImg(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
++			
++		} else {  // 첨부된 파일이 없으면
++			fileName = File.separator + "images" + File.separator + "none.png";
++			// 미리 준비된 none.png파일을 대신 출력함
++			
++			vo.setGdsImg(fileName);
++			vo.setGdsThumbImg(fileName);
++		}
++		
++		
++		System.out.println("=================");
++		
++		System.out.println("1 = " + vo.getGdsName());
++		System.out.println("1 = " + vo.getGdsPrice());
++		System.out.println("1 = " + vo.getGdsDes());
++		System.out.println("1 = " + vo.getGdsImg());
++		System.out.println("=================");
++							
++		adminService.register(vo);
++		
++		return "redirect:/admin/index";
++	}
++		  
++	// 상품 목록
++	@RequestMapping(value = "/goods/list", method = RequestMethod.GET)
++	public void getGoodsList(Model model) throws Exception {
++		logger.info("get goods list");
++		
++		List<GoodsViewVO> list = adminService.goodslist();  // GoodsVO형태의 List형 변수 list 선언
++		
++		model.addAttribute("list", list);  // 변수 list의 값을 list 세션에 부여
++	}
++	
++	// 상품 조회
++	@RequestMapping(value = "/goods/view", method = RequestMethod.GET)
++	public void getGoodsview(@RequestParam("n") int gdsNum, Model model) throws Exception {
++		logger.info("get goods view");
++		
++		GoodsViewVO goods = adminService.goodsView(gdsNum);
++		model.addAttribute("goods", goods);
++	}
++	
++	// 상품 수정 
++	@RequestMapping(value = "/goods/modify", method = RequestMethod.GET)
++	public void getGoodsModify(@RequestParam("n") int gdsNum, Model model) throws Exception {
++	// @RequestParam("n")으로 인해, URL주소에 있는 n의 값을 가져와 gdsNum에 저장
++		
++		logger.info("get goods modify");
++		
++		GoodsViewVO goods = adminService.goodsView(gdsNum);  // GoodsViewVO형태 변수 goods에 상품 정보 저장
++		model.addAttribute("goods", goods);
++		
++		List<CategoryVO> category = null;
++		category = adminService.category();
++		model.addAttribute("category", JSONArray.fromObject(category));
++	}
++	
++	// 상품 수정
++	@RequestMapping(value = "/goods/modify", method = RequestMethod.POST)
++	public String postGoodsModify(GoodsVO vo, MultipartFile file, HttpServletRequest req) throws Exception {
++		logger.info("post goods modify");
++	
++		// 새로운 파일이 등록되었는지 확인
++		if(file.getOriginalFilename() != null && file.getOriginalFilename() != "") {
++			// 기존 파일을 삭제
++			new File(uploadPath + req.getParameter("gdsImg")).delete();
++			new File(uploadPath + req.getParameter("gdsThumbImg")).delete();
++			
++			// 새로 첨부한 파일을 등록
++			String imgUploadPath = uploadPath + File.separator + "imgUpload";
++			String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
++			String fileName = UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(), ymdPath);
++			
++			vo.setGdsImg(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
++			vo.setGdsThumbImg(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
++			
++		} else {  // 새로운 파일이 등록되지 않았다면
++			// 기존 이미지를 그대로 사용
++			vo.setGdsImg(req.getParameter("gdsImg"));
++			vo.setGdsThumbImg(req.getParameter("gdsThumbImg"));
++			
++		}
++		
++		adminService.goodsModify(vo);
++		
++		return "redirect:/admin/index";
++	}
++	
++	// 상품 삭제
++	@RequestMapping(value = "/goods/delete", method = RequestMethod.POST)
++	public String postGoodsDelete(@RequestParam("n") int gdsNum) throws Exception {
++	// @RequestParam("n")으로 인해, URL주소에 있는 n의 값을 가져와 gdsNum에 저장
++	
++		logger.info("post goods delete");
++	
++		adminService.goodsDelete(gdsNum);
++		
++		return "redirect:/admin/index";
++	}
++	
++	// ck 에디터에서 파일 업로드
++	@RequestMapping(value = "/goods/ckUpload", method = RequestMethod.POST)
++	public void postCKEditorImgUpload(HttpServletRequest req,
++									  HttpServletResponse res,
++									  @RequestParam MultipartFile upload) throws Exception {
++		logger.info("post CKEditor img upload");
++		
++		// 랜덤 문자 생성
++		UUID uid = UUID.randomUUID();
++		
++		OutputStream out = null;
++		PrintWriter printWriter = null;
++				
++		// 인코딩
++		res.setCharacterEncoding("utf-8");
++		res.setContentType("text/html;charset=utf-8");
++		
++		try {
++			
++			String fileName = upload.getOriginalFilename();  // 파일 이름 가져오기
++			byte[] bytes = upload.getBytes();
++			
++			// 업로드 경로
++			String ckUploadPath = uploadPath + File.separator + "ckUpload" + File.separator + uid + "_" + fileName;
++			
++			out = new FileOutputStream(new File(ckUploadPath));
++			out.write(bytes);
++			out.flush();  // out에 저장된 데이터를 전송하고 초기화
++			
++			String callback = req.getParameter("CKEditorFuncNum");
++			printWriter = res.getWriter();
++			String fileUrl = "/ckUpload/" + uid + "_" + fileName;  // 작성화면
++			
++			// 업로드시 메시지 출력
++			printWriter.println("<script type='text/javascript'>"
++						+ "window.parent.CKEDITOR.tools.callFunction("
++						+ callback+",'"+ fileUrl+"','이미지를 업로드하였습니다.')"
++						+"</script>");
++			
++			printWriter.flush();
++			
++		} catch (IOException e) { e.printStackTrace();
++		} finally {
++			try {
++				if(out != null) { out.close(); }
++				if(printWriter != null) { printWriter.close(); }
++			} catch(IOException e) { e.printStackTrace(); }
++		} 
++		
++		return;	
++	}
++	
++	// 주문 목록
++	@RequestMapping(value = "/shop/orderList", method = RequestMethod.GET)
++	public void getOrderList(Model model) throws Exception {
++		logger.info("get order list");
++				
++		List<OrderVO> orderList = adminService.orderList();
++		
++		model.addAttribute("orderList", orderList);
++	}
++	 
++	// 주문 상세 목록
++	@RequestMapping(value = "/shop/orderView", method = RequestMethod.GET)
++	public void getOrderList(@RequestParam("n") String orderId,
++							OrderVO order, Model model) throws Exception {
++		logger.info("get order view");
++		
++		order.setOrderId(orderId);		
++		List<OrderListVO> orderView = adminService.orderView(order);
++		
++		model.addAttribute("orderView", orderView);
++	}
++	
++	// 주문 상세 목록 - 상태 변경
++	@RequestMapping(value = "/shop/orderView", method = RequestMethod.POST)
++	public String delivery(OrderVO order) throws Exception {
++		logger.info("post order view");
++				
++		adminService.delivery(order);
++		
++		// 새로운 Service → DAO → Mapper 를 사용하지 않고, 기존에 있던 Service를 사용
++		List<OrderListVO> orderView = adminService.orderView(order);	
++		
++		// 생성자 사용
++		GoodsVO goods = new GoodsVO();
++				
++		for(OrderListVO i : orderView) {
++			goods.setGdsNum(i.getGdsNum());
++			goods.setGdsStock(i.getCartStock());
++			adminService.changeStock(goods);
++		}
++	
++		return "redirect:/admin/shop/orderView?n=" + order.getOrderId();
++	}
++	
++	// 모든 소감(댓글)
++	@RequestMapping(value = "/shop/allReply", method = RequestMethod.GET)
++	public void getAllReply(Model model) throws Exception {
++		logger.info("get all reply");
++				
++		List<ReplyListVO> reply = adminService.allReply();
++		
++		model.addAttribute("reply", reply);
++	}
++
++	// 모든 소감(댓글)
++	@RequestMapping(value = "/shop/allReply", method = RequestMethod.POST)
++	public String postAllReply(ReplyVO reply) throws Exception {
++		logger.info("post all reply");
++				
++		adminService.deleteReply(reply.getRepNum());
++		
++		return "redirect:/admin/shop/allReply";
++	}	
++*/
++}
+\ No newline at end of file
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/aside.jsp b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/aside.jsp
+new file mode 100644
+index 0000000..2b383cc
+--- /dev/null
++++ b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/aside.jsp
+@@ -0,0 +1,13 @@
++<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
++
++<h3></h3>
++
++<ul>
++	<li><a href="/admin/goods/register">상품 등록</a></li>
++	<li><a href="/admin/goods/list">상품 목록</a></li>
++	<li><a href="/admin/shop/orderList">주문 목록</a></li>
++	
++	<li><a href="/admin/shop/allReply">상품 소감</a></li>
++	
++	<li><a href="">유저 목록</a></li>
++</ul>
+\ No newline at end of file
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/footer.jsp b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/footer.jsp
+new file mode 100644
+index 0000000..407238e
+--- /dev/null
++++ b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/footer.jsp
+@@ -0,0 +1,3 @@
++<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
++
++<p> 푸 터 영 역 </p>	
+\ No newline at end of file
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/header.jsp b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/header.jsp
+new file mode 100644
+index 0000000..c88b7aa
+--- /dev/null
++++ b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/header.jsp
+@@ -0,0 +1,8 @@
++<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
++
++<div class="page-header">
++<h1 class="title">
++	<a href="/admin/index">HOJIN Admin</a>
++</h1>
++	<h1>헤 더 영 역</h1>
++</div>
+\ No newline at end of file
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/nav.jsp b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/nav.jsp
+new file mode 100644
+index 0000000..d4002c9
+--- /dev/null
++++ b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/include/nav.jsp
+@@ -0,0 +1,13 @@
++<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
++<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
++
++<ul>
++<c:if test="${member != null}">
++	<li>
++		<a href="/">일반 화면</a>	
++	</li>
++	<li>
++		<a href="/member/signout">로그아웃</a>
++	</li>
++</c:if>
++</ul>
+\ No newline at end of file
+diff --git a/HOJINTOON/src/main/webapp/WEB-INF/views/admin/index.jsp b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/index.jsp
+new file mode 100644
+index 0000000..25dcfbc
+--- /dev/null
++++ b/HOJINTOON/src/main/webapp/WEB-INF/views/admin/index.jsp
+@@ -0,0 +1,69 @@
++<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
++<html>
++<head>
++	<title>HOJIN Admin</title>
++	
++<script src="/resources/jquery/jquery-3.3.1.min.js"></script>
++
++<link rel="stylesheet" href="/resources/bootstrap/bootstrap.min.css">
++<link rel="stylesheet" href="/resources/bootstrap/bootstrap-theme.min.css">
++<script src="/resources/bootstrap/bootstrap.min.js"></script>
++	
++<style>
++	body { font-family:'맑은 고딕', verdana; padding:0; margin:0; }
++	ul { padding:0; margin:0; list-style:none;  }
++ 
++	div#root { width:90%; margin:0 auto; }
++	
++	header#header { font-size:60px; padding:20px 0; }
++	header#header h1 a { color:#000; font-weight:bold; }
++	
++	nav#nav { padding:10px; text-align:right; }
++	nav#nav ul li { display:inline-block; margin-left:10px; }
++ 
++ 		section#container { padding:20px 0; border-top:2px solid #eee; border-bottom:2px solid #eee; }
++	section#container::after { content:""; display:block; clear:both; }
++	aside { float:left; width:200px; }
++	div#container_box { float:right; width:calc(100% - 200px - 20px); }
++	
++	aside ul li { text-align:center; margin-bottom:10px; }
++	aside ul li a { display:block; width:100%; padding:10px 0;}
++	aside ul li a:hover { background:#eee; }
++	
++	footer#footer { background:#f9f9f9; padding:20px; }
++	footer#footer ul li { display:inline-block; margin-right:10px; } 
++</style>
++		 
++</head>
++<body>
++<div id="root">
++	<header id="header">
++		<div id="header_box">
++			<%@ include file="include/header.jsp" %>
++		</div>
++	</header>
++
++	<nav id="nav">
++		<div id="nav_box">
++			<%@ include file="include/nav.jsp" %>
++		</div>
++	</nav>
++	
++	<section id="container">
++		<aside>
++			<%@ include file="include/aside.jsp" %>
++		</aside>
++		<div id="container_box">
++			본문 영역
++		</div>
++	</section>
++
++	<footer id="footer">
++		<div id="footer_box">
++			<%@ include file="include/footer.jsp" %>
++		</div>		
++	</footer>
++
++</div>
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HOJINTOON/target/classes/com/toon/controller/AdminController.class b/HOJINTOON/target/classes/com/toon/controller/AdminController.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..4636c72286a8c796d6655ac56fe2e71381b49fd3
+GIT binary patch
+literal 1039
+zcmb7CT~AX%5Ix&MTW+h=0^$cMiYNtPH6amFVnPTQlA;NazWB7g-IlGlyY=2JA3sZd
+z@Z-TB;EyuSZW~If58C8*c6N5=oS8X4e|`S}U>z^ANHHvgro*i<nukW)*hG<x`F5kD
+z^v<Q9#TY}eElvfGgl_S-^|lNxLnbn<mW&xnRTH;(5;fP`yz1{N47sf^Qd-$p4C$qE
+zjbUuZG-QB0u4PeRm>td86QMQnMFH0_$uQB9wqJ{3aj7~)--$$$RLXxsPJrP?0prLp
+zOjebaZ+e}&jE_Y<lAdEIqMC@6^9PriEzdAO8aE4=Mvhq86O|BT^&bY~x+I$Wx*^XQ
+zg5C2_cC9ix$zqOSYRLIA!f^Yrr>*M9no1NA+1A=v;gc9<e4FQ7X*XcL?+t-$^qcL*
+zO1GM^=*Tk@zvpMN&g)7yxVWsr59NoROzeT^cIhppj-QICN9|{*sArk!NPA)$3@`t?
+zs86Jt>DRl*IXvm_Xx`V&V+qSylu0L}Yb{^}&uFenHx0FTb(KffbyRWU2#!oI4&|P5
+zyP6&m;F_Bx!^&S7CsxMN*o&^@L&>_$aN%Ukm+_E<ktWSE+;QrlQyMvB>7y3NE0cA<
+zi4yyY;4_LJ$w{F^{}~@z#gxBsB}gQLG)~qfjxT?~%xKDrPbu^tU>3LNAuXSh)5HQ8
+zBkwNm(P@sL?vs5$cK#h$LVO>Ql~}-I&u^0=4k-T##nR$8JWXK;7f=w`K!D9Fkof^*
+U3ab=NVa-F8=)^q~8$dn(4W6U-8~^|S
+
+literal 0
+HcmV?d00001
+
+diff --git a/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties b/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties
+index 487a2de..2196be9 100644
+--- a/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties
++++ b/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties
+@@ -1,5 +1,5 @@
+ #Generated by Maven Integration for Eclipse
+-#Mon May 25 15:24:21 KST 2020
++#Tue May 26 09:11:38 KST 2020
+ m2e.projectLocation=C\:\\Users\\wls73\\git\\HOJIN\\HOJINTOON
+ m2e.projectName=HOJINTOON
+ groupId=com.toon
+-- 
+2.24.1.windows.2
+
+From c95234a8b19140f5e3a3e0b7f857377eb6a6da54 Mon Sep 17 00:00:00 2001
+From: UnLive <dnwjdgh12@naver.com>
+Date: Tue, 26 May 2020 01:03:16 +0900
+Subject: [PATCH] =?UTF-8?q?=EC=BB=A4=EB=B0=8B=20=ED=85=8C=EC=8A=A4?=
+ =?UTF-8?q?=ED=8A=B8?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../org.eclipse.wst.common.component          | 22 +++++++++----------
+ .../maven/com.toon/hojin/pom.properties       |  2 +-
+ 2 files changed, 12 insertions(+), 12 deletions(-)
+
+diff --git a/HOJINTOON/.settings/org.eclipse.wst.common.component b/HOJINTOON/.settings/org.eclipse.wst.common.component
+index 225b2c4..197b8c5 100644
+--- a/HOJINTOON/.settings/org.eclipse.wst.common.component
++++ b/HOJINTOON/.settings/org.eclipse.wst.common.component
+@@ -1,11 +1,11 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project-modules id="moduleCoreId" project-version="1.5.0">
+-	<wb-module deploy-name="HOJINTOON">
+-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+-		<wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+-		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+-		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+-		<property name="java-output-path" value="target/classes"/>
+-        <property name="context-root" value="hojin"/>
+-	</wb-module>
+-</project-modules>
++<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
++	<wb-module deploy-name="HOJINTOON">
++        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
++		<wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
++		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
++		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
++        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
++		<property name="java-output-path" value="target/classes"/>
++        <property name="context-root" value="hojin"/>
++	</wb-module>
++</project-modules>
+diff --git a/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties b/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties
+index 0275d2f..2cb64d5 100644
+--- a/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties
++++ b/HOJINTOON/target/m2e-wtp/web-resources/META-INF/maven/com.toon/hojin/pom.properties
+@@ -1,5 +1,5 @@
+ #Generated by Maven Integration for Eclipse
+-#Mon May 25 22:07:27 KST 2020
++#Tue May 26 01:01:11 KST 2020
+ version=1.0.0-BUILD-SNAPSHOT
+ groupId=com.toon
+ m2e.projectName=HOJINTOON
+-- 
+2.24.1.windows.2
+
